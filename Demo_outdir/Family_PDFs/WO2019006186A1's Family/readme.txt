@@ -1,9 +1,0 @@
-PDFs Downloaded: 2
-
-US20190003876A1
-US20190003877A1
-
-PDFs Not Found: 0
-
-
-Total: 2

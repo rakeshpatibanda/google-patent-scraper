@@ -68,7 +68,12 @@ class GooglePatentsScraper(QDialog):
         self.collectpdf_thread.start()
 
     def update_progressbar(self, percentage):
-        self.progressBar.setValue(percentage)
+        try:
+            # Convert percentage to integer
+            int_percentage = int(percentage)
+            self.progressBar.setValue(int_percentage)
+        except ValueError:
+            print(f"Invalid percentage value: {percentage}")
 
     def update_log(self, message):
         self.logBrowser.append(f'({datetime.today().strftime("%H:%M:%S")}) {message}')
